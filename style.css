@@ -16,7 +16,7 @@ body{
     justify-content: center;
 }
 
-input{
+input, select{
     outline: none;
     font-weight: 400;
     font-size: small;
@@ -27,18 +27,21 @@ input{
     background-color: white;
 }
   
+select{
+    background-color: rgb(204, 228, 238);
+    color: #1360a0;
+    font-weight: bold;
+}
 a{
     text-decoration: none;
     color:#00447c;
     font-weight: bold;
 }
 
-select{
-    margin: 5px 15px 0 0;
-}
-
 option{
+    color:black;
     background-color: white;
+    height: 120px;
 }
 
 .wrapper{
@@ -64,7 +67,7 @@ option{
 }
 
 .hover{
-    background-color: lightblue;
+    background-color: rgb(204, 228, 238);
 }
 
 .focus{
@@ -97,4 +100,15 @@ label, .error-focus{
     font-weight: bold;
     color: #414141;
     font-size: 15px
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper{
+        width: 80%;
+    }    
+  }
+
+.selected{
+    font-weight: bold;
+    color: #00447c
 }

@@ -5,11 +5,12 @@ const teachDuration = document.querySelector("#teach-duration");
 const button = document.querySelector("#submit");
 const user = JSON.parse(localStorage.getItem("user"));
 
+
 if (user) {
   firstName.value = user.firstName;
   lastName.value = user.lastName;
-  teachLevel.value = user.teachLevel;
-  teachDuration.value = user.teachDuration;
+  teachLevel.value=user.teachLevel;
+  teachDuration.value=user.teachDuration;
 } else {
   firstName.value = "";
   lastName.value = "";
@@ -19,9 +20,9 @@ if (user) {
 
 addInputEffects("#first-name");
 addInputEffects("#last-name");
-teachDuration.options[
-  teachDuration.selectedIndex
-].style = `color: #1360a0;font-weight: bold;`;
+
+addSelectEffects("#teach-level")
+addSelectEffects("#teach-duration")
 
 button.addEventListener("click", () => {
   if (validInput("#first-name") && validInput("#last-name")) {
@@ -29,3 +30,4 @@ button.addEventListener("click", () => {
     alert(`Uspješno spremljeni podaci`);
   }
 });
+
