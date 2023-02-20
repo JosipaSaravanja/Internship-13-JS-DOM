@@ -25,7 +25,7 @@ function addErrorEffect(elementId) {
   if (!document.querySelector(elementId).parentNode.querySelector(".errorMessage")) {//ako vec ne postoji
     document.querySelector(elementId).insertAdjacentHTML(
         "afterend",
-        `<p class="errorMessage">The ${document.querySelector(elementId).placeholder} field must be requid</p>`
+        `<p class="errorMessage">The ${document.querySelector(elementId).placeholder} field is requid</p>`
       );
   }
   document.querySelector(`${elementId}-label`).classList.add("error-focus");
