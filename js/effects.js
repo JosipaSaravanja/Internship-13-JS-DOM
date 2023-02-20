@@ -15,26 +15,17 @@ function addInputEffects(elementId) {
   });
 
   element.addEventListener("blur", () => {
-    document
-      .querySelector(`${elementId}-label`)
-      .classList.remove("label-focus");
+    document.querySelector(`${elementId}-label`).classList.remove("label-focus");
     element.classList.remove("focus");
   });
 }
 
 function addErrorEffect(elementId) {
   document.querySelector(elementId).classList.add("error");
-  if (
-    !document.querySelector(elementId).parentNode.querySelector(".errorMessage")
-  ) {
-    //ako vec ne postoji
-    document
-      .querySelector(elementId)
-      .insertAdjacentHTML(
+  if (!document.querySelector(elementId).parentNode.querySelector(".errorMessage")) {//ako vec ne postoji
+    document.querySelector(elementId).insertAdjacentHTML(
         "afterend",
-        `<p class="errorMessage">The ${
-          document.querySelector(elementId).placeholder
-        } field must be requid</p>`
+        `<p class="errorMessage">The ${document.querySelector(elementId).placeholder} field must be requid</p>`
       );
   }
   document.querySelector(`${elementId}-label`).classList.add("error-focus");
@@ -70,8 +61,6 @@ function addSelectEffects(elementId) {
   });
 
   element.addEventListener("blur", () => {
-    document
-      .querySelector(`${elementId}-label`)
-      .classList.remove("label-focus");
+    document.querySelector(`${elementId}-label`).classList.remove("label-focus");
   });
 }
